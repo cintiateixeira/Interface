@@ -145,11 +145,12 @@ public class TrabalhoFinal extends javax.swing.JFrame {
         TelaPrincipal tela = new TelaPrincipal();
         jDesktopPane1.add(tela);
         
-        if(jTextField1.getText().equals("usuarioBiblioteca") && jTextField2.getText().equals("681228")) {
+        if(jTextField1.getText().equals("") && jTextField2.getText().equals("")) {
             tela.setVisible(true);
+            JOptionPane.showMessageDialog(null, "Bem Vindo!");
            
         }else{
-            JOptionPane.showMessageDialog(null, "Acesso Negado");
+            JOptionPane.showMessageDialog(null, "Usuario ou senha incorretos");
             JOptionPane.showMessageDialog(null, "Tente Novamente");
 
         }
