@@ -35,7 +35,7 @@ public class EntregarLivro extends javax.swing.JInternalFrame {
         jTextField1 = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabela4 = new javax.swing.JTable();
 
         setClosable(true);
         setIconifiable(true);
@@ -50,8 +50,10 @@ public class EntregarLivro extends javax.swing.JInternalFrame {
             ex.printStackTrace();
         }
 
+        jButton1.setBackground(new java.awt.Color(153, 153, 255));
         jButton1.setText("Procurar");
 
+        jButton2.setBackground(new java.awt.Color(51, 255, 204));
         jButton2.setText("Entregar");
 
         jLabel2.setText("Título do Livro");
@@ -107,7 +109,7 @@ public class EntregarLivro extends javax.swing.JInternalFrame {
                 .addContainerGap())
         );
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabela4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -123,7 +125,7 @@ public class EntregarLivro extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tabela4);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -170,7 +172,7 @@ public class EntregarLivro extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTable tabela4;
     // End of variables declaration//GEN-END:variables
 }

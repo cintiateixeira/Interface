@@ -28,7 +28,7 @@ public class DevolverLivro extends javax.swing.JInternalFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabela5 = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jFormattedTextField1 = new javax.swing.JFormattedTextField();
@@ -46,7 +46,7 @@ public class DevolverLivro extends javax.swing.JInternalFrame {
         setMaximizable(true);
         setResizable(true);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabela5.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -62,7 +62,7 @@ public class DevolverLivro extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tabela5);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -85,8 +85,10 @@ public class DevolverLivro extends javax.swing.JInternalFrame {
             ex.printStackTrace();
         }
 
+        jButton1.setBackground(new java.awt.Color(153, 153, 255));
         jButton1.setText("Procurar");
 
+        jButton2.setBackground(new java.awt.Color(51, 255, 204));
         jButton2.setText("Devolver");
 
         jLabel2.setText("Valor Total:");
@@ -180,7 +182,7 @@ public class DevolverLivro extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JTable tabela5;
     // End of variables declaration//GEN-END:variables
 }

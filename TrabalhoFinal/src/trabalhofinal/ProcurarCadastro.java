@@ -4,6 +4,9 @@
  */
 package trabalhofinal;
 
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author 55899
@@ -35,7 +38,7 @@ public class ProcurarCadastro extends javax.swing.JInternalFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabela3 = new javax.swing.JTable();
 
         setClosable(true);
         setIconifiable(true);
@@ -68,6 +71,11 @@ public class ProcurarCadastro extends javax.swing.JInternalFrame {
 
         jButton3.setBackground(new java.awt.Color(0, 204, 204));
         jButton3.setText("Atualizar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -108,7 +116,7 @@ public class ProcurarCadastro extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabela3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -124,7 +132,7 @@ public class ProcurarCadastro extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tabela3);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -157,7 +165,32 @@ public class ProcurarCadastro extends javax.swing.JInternalFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+      if(tabela3.getSelectedRow() != -1){  
+      DefaultTableModel dtmProdutos = (DefaultTableModel) tabela3.getModel();
+      dtmProdutos.removeRow(tabela3.getSelectedRow());
+      JOptionPane.showMessageDialog(null, "Cadastro excluido com sucesso");
+      }else{
+          JOptionPane.showMessageDialog(null, "Selecione um item para excluir!");
+      }
+
+        
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        if(tabela3.getSelectedRow() != -1){
+            
+            tabela.setValueAt(edtTitulo.getText(),tabela3.getSelectedRow() , 0);
+            tabela.setValueAt(edtAutor.getText(),tabela3.getSelectedRow() , 1);
+            tabela.setValueAt(edtGenero.getText(),tabela3.getSelectedRow() , 2);
+            tabela.setValueAt(edtEdicao.getText(),tabela3.getSelectedRow() , 3);
+            tabela.setValueAt(edtEditora.getText(),tabela3.getSelectedRow() , 4);
+            tabela.setValueAt(edtQuantidade.getText(),tabela3.getSelectedRow() , 5);
+            tabela.setValueAt(edtPreco.getText(),tabela3.getSelectedRow() , 6);
+            tabela.setValueAt(edtData.getText(),tabela3.getSelectedRow() , 7);
+            JOptionPane.showMessageDialog(null, "Cadastro atualizado com sucesso");
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -170,6 +203,6 @@ public class ProcurarCadastro extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tabela3;
     // End of variables declaration//GEN-END:variables
 }
