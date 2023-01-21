@@ -10,12 +10,12 @@ import javax.swing.JOptionPane;
  *
  * @author 55899
  */
-public class TrabalhoFinal extends javax.swing.JFrame {
+public class TelaLogin extends javax.swing.JFrame {
 
     /**
      * Creates new form TrabalhoFinal
      */
-    public TrabalhoFinal() {
+    public TelaLogin() {
         initComponents();
     }
 
@@ -142,7 +142,7 @@ public class TrabalhoFinal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void edtEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtEntrarActionPerformed
-        TelaPrincipal tela = new TelaPrincipal();
+        TelaMenu tela = new TelaMenu();
         jDesktopPane1.add(tela);
         
         if(jTextField1.getText().equals("") && jTextField2.getText().equals("")) {
@@ -181,20 +181,21 @@ public class TrabalhoFinal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TrabalhoFinal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TrabalhoFinal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TrabalhoFinal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TrabalhoFinal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TrabalhoFinal().setVisible(true);
+                new TelaLogin().setVisible(true);
             }
         });
     }

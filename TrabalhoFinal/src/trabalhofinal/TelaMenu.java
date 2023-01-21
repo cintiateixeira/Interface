@@ -8,12 +8,12 @@ package trabalhofinal;
  *
  * @author 55899
  */
-public class TelaPrincipal extends javax.swing.JInternalFrame {
+public class TelaMenu extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form TelaPrincipal
      */
-    public TelaPrincipal() {
+    public TelaMenu() {
         initComponents();
     }
 
@@ -44,6 +44,8 @@ public class TelaPrincipal extends javax.swing.JInternalFrame {
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
 
@@ -126,11 +128,23 @@ public class TelaPrincipal extends javax.swing.JInternalFrame {
         jMenu3.add(jMenuItem6);
 
         jMenuItem7.setText("Devolver Livro");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem7);
 
         jMenuBar1.add(jMenu3);
 
         jMenu4.setText("Arquivos");
+
+        jMenuItem2.setText("Exportar Cliente");
+        jMenu4.add(jMenuItem2);
+
+        jMenuItem3.setText("Exportar Livro");
+        jMenu4.add(jMenuItem3);
+
         jMenuBar1.add(jMenu4);
 
         jMenu5.setText("Info.");
@@ -162,7 +176,7 @@ public class TelaPrincipal extends javax.swing.JInternalFrame {
         jDesktopPane1.add(cd);
         cd.setVisible(true);
 
-        TelaPrincipal tela = new TelaPrincipal();
+        TelaMenu tela = new TelaMenu();
         jDesktopPane1.add(tela);
         tela.setDefaultCloseOperation(0);
 
@@ -193,7 +207,17 @@ public class TelaPrincipal extends javax.swing.JInternalFrame {
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
         // TODO add your handling code here:
+        EntregarLivro el = new EntregarLivro();
+        jDesktopPane1.add(el);
+        el.setVisible(true);
     }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        // TODO add your handling code here:
+        DevolverLivro dl = new DevolverLivro();
+        jDesktopPane1.add(dl);
+        dl.setVisible(true);
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -209,6 +233,8 @@ public class TelaPrincipal extends javax.swing.JInternalFrame {
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
