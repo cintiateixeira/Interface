@@ -4,6 +4,7 @@
  */
 package trabalhofinal;
 
+import Main.ListaTeste;
 import javax.swing.JOptionPane;
 
 /**
@@ -147,17 +148,14 @@ public class TelaLogin extends javax.swing.JFrame {
         
         if(jTextField1.getText().equals("") && jTextField2.getText().equals("")) {
             tela.setVisible(true);
-            JOptionPane.showMessageDialog(null, "Bem Vindo!");
+           
            
         }else{
             JOptionPane.showMessageDialog(null, "Usuario ou senha incorretos");
             JOptionPane.showMessageDialog(null, "Tente Novamente");
 
         }
-
-        
-        
-            
+  
     }//GEN-LAST:event_edtEntrarActionPerformed
 
     private void edtLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtLoginActionPerformed
@@ -168,6 +166,8 @@ public class TelaLogin extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
+        ListaTeste.rumCadastroTeste();
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -190,12 +190,12 @@ public class TelaLogin extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(TelaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
+        //</editor-fold>SSSs
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaLogin().setVisible(true);
+                new TelaLogin().setVisible(true); 
             }
         });
     }

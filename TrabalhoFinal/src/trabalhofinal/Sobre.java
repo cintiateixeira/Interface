@@ -15,6 +15,7 @@ public class Sobre extends javax.swing.JInternalFrame {
      */
     public Sobre() {
         initComponents();
+        jLabel10.setVisible(true);
     }
 
     /**
@@ -35,72 +36,55 @@ public class Sobre extends javax.swing.JInternalFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
-        jLabel1.setText("\"Esse é um projeto elaborado e arquitetado por Cintia Teixeira e Marcos Brito, ");
+        jPanel1.setLayout(null);
 
-        jLabel3.setText("esse programa foi desenvolvido com todo o aprendizado obtido em sala de aula,");
+        jLabel1.setText("\"Este é um projeto elaborado e arquitetado por Cintia Teixeira e Marcos Brito. ");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(10, 20, 441, 16);
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(6, 128, 0, 0);
+
+        jLabel3.setText("O programa foi desenvolvido com todo o aprendizado obtido em sala de aula,");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(10, 40, 434, 16);
 
         jLabel4.setText("com o intuito de apresentar a consolidação dos nossos conhecimentos em java.");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(10, 60, 455, 16);
 
         jLabel5.setText("O programa criado trata-se de uma simulação de um sistema bibliotecário que,");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(10, 80, 449, 16);
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(460, 116, 0, 0);
 
         jLabel7.setText("com exceção, de banco de dados, poossui os principais implementos que um ");
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(10, 100, 442, 16);
 
         jLabel8.setText("sistema desse gênero necessita.\"");
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(10, 120, 195, 16);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel6)))
-                .addGap(385, 385, 385))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8)
-                .addGap(0, 267, Short.MAX_VALUE))
-        );
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/foto minha.jpg"))); // NOI18N
+        jLabel10.setText("jLabel10");
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(0, 140, 510, 420);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 753, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 585, Short.MAX_VALUE)
         );
 
         pack();
@@ -109,6 +93,7 @@ public class Sobre extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

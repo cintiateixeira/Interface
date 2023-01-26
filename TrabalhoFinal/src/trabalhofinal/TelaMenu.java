@@ -33,10 +33,11 @@ public class TelaMenu extends javax.swing.JInternalFrame {
         jDesktopPane2 = new javax.swing.JDesktopPane();
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
+        jPanel1 = new javax.swing.JPanel();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu2 = new javax.swing.JMenu();
-        edtMenu1 = new javax.swing.JMenuItem();
+        cadastrarCliente = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
@@ -46,6 +47,7 @@ public class TelaMenu extends javax.swing.JInternalFrame {
         jMenu4 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem10 = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
 
@@ -74,22 +76,33 @@ public class TelaMenu extends javax.swing.JInternalFrame {
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 709, Short.MAX_VALUE)
+            .addGap(0, 631, Short.MAX_VALUE)
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 416, Short.MAX_VALUE)
+            .addGap(0, 345, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jDesktopPane1)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jDesktopPane1)
         );
 
         jMenu2.setText("Clientes");
 
-        edtMenu1.setText("Cadrastar");
-        edtMenu1.addActionListener(new java.awt.event.ActionListener() {
+        cadastrarCliente.setText("Cadrastar");
+        cadastrarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtMenu1ActionPerformed(evt);
+                cadastrarClienteActionPerformed(evt);
             }
         });
-        jMenu2.add(edtMenu1);
+        jMenu2.add(cadastrarCliente);
 
         jMenuItem1.setText("Procurar  Cadrasto");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
@@ -145,11 +158,24 @@ public class TelaMenu extends javax.swing.JInternalFrame {
         jMenuItem3.setText("Exportar Livro");
         jMenu4.add(jMenuItem3);
 
+        jMenuItem10.setText("Historico de Transações");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem10);
+
         jMenuBar1.add(jMenu4);
 
         jMenu5.setText("Info.");
 
         jMenuItem9.setText("Sobre");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
         jMenu5.add(jMenuItem9);
 
         jMenuBar1.add(jMenu5);
@@ -160,17 +186,17 @@ public class TelaMenu extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void edtMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtMenu1ActionPerformed
+    private void cadastrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarClienteActionPerformed
 
         Cadastrar cd = new Cadastrar();
         jDesktopPane1.add(cd);
@@ -181,7 +207,7 @@ public class TelaMenu extends javax.swing.JInternalFrame {
         tela.setDefaultCloseOperation(0);
 
 
-    }//GEN-LAST:event_edtMenu1ActionPerformed
+    }//GEN-LAST:event_cadastrarClienteActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
@@ -219,11 +245,26 @@ public class TelaMenu extends javax.swing.JInternalFrame {
         dl.setVisible(true);
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+
+        
+        Sobre inf = new Sobre();
+      jDesktopPane1.add(inf);
+      inf.setVisible(true);
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+        // TODO add your handling code here:
+        historicoTrans ht = new historicoTrans();
+        jDesktopPane1.add(ht);
+        ht.setVisible(true);
+    }//GEN-LAST:event_jMenuItem10ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.JMenuItem edtMenu1;
+    private javax.swing.JMenuItem cadastrarCliente;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JDesktopPane jDesktopPane2;
     private javax.swing.JMenu jMenu1;
@@ -233,6 +274,7 @@ public class TelaMenu extends javax.swing.JInternalFrame {
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
@@ -241,6 +283,7 @@ public class TelaMenu extends javax.swing.JInternalFrame {
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JPopupMenu jPopupMenu2;
     // End of variables declaration//GEN-END:variables

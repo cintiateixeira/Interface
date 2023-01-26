@@ -50,7 +50,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" pref="192" max="32767" attributes="0"/>
+                  <Component id="jScrollPane1" pref="186" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -71,15 +71,14 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel2" alignment="0" min="-2" pref="260" max="-2" attributes="0"/>
+                          <Component id="nomeApresenta" alignment="0" min="-2" pref="260" max="-2" attributes="0"/>
                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jFormattedTextField1" min="-2" pref="191" max="-2" attributes="0"/>
+                          <Component id="procuraCpf" min="-2" pref="191" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="239" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jButton3" max="32767" attributes="0"/>
-                          <Component id="jButton2" pref="88" max="32767" attributes="0"/>
-                          <Component id="jButton1" max="32767" attributes="0"/>
+                          <Component id="buttonProcurarCliente" pref="88" max="32767" attributes="0"/>
+                          <Component id="buttonExcluirCliente" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                   </Group>
@@ -88,27 +87,24 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jFormattedTextField1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="procuraCpf" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="nomeApresenta" pref="38" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="buttonExcluirCliente" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="buttonProcurarCliente" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -119,14 +115,17 @@
                 <Property name="text" type="java.lang.String" value="CPF"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField1">
+            <Component class="javax.swing.JFormattedTextField" name="procuraCpf">
               <Properties>
                 <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
                   <Format format="###.###.###-##" subtype="-1" type="5"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="procuraCpfActionPerformed"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="buttonExcluirCliente">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="ff" type="rgb"/>
@@ -134,31 +133,26 @@
                 <Property name="text" type="java.lang.String" value="Excluir"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonExcluirClienteActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel2">
+            <Component class="javax.swing.JLabel" name="nomeApresenta">
               <Properties>
-                <Property name="text" type="java.lang.String" value="jLabel2"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="18" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Name"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton2">
+            <Component class="javax.swing.JButton" name="buttonProcurarCliente">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="ff" red="66" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Procurar"/>
               </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButton3">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="cc" green="cc" red="0" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Atualizar"/>
-              </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonProcurarClienteActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
@@ -170,7 +164,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="tabela3">
+            <Component class="javax.swing.JTable" name="tabelaProcura">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                   <Table columnCount="7" rowCount="0">
